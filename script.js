@@ -7,12 +7,12 @@ function getMessage(){
 	return new Promise((resolve)=>{
 		const text = message.value;
 		const delay = parseInt(delayInSec.value);
-		setTimeout(()=>resolve(text),delay*1000);
+		setTimeout(()=>resolve(text),delay);
 	});
 }
 async function showMessage(){
 	const message = await getMessage();
-	output.innerHTML = message;
+	output.textContent = message;
 }
 submit.addEventListener("click",()=>{
 	showMessage();
