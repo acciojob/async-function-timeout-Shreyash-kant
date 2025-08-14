@@ -12,7 +12,7 @@ function getMessage(){
 }
 async function showMessage(){
 	const message = await getMessage();
-	output.textContent = message;
+	output.innerHTML = message;
 }
 submit.addEventListener("click",()=>{
 	showMessage();
