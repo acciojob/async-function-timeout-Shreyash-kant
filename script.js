@@ -5,7 +5,7 @@ const delayInSec = document.getElementById("delay");
 const submit = document.getElementById("btn");
 function getMessage(){
 	return new Promise((resolve)=>{
-		const text = message.value.trim();
+		const text = message.value;
 		const delay = parseInt(delayInSec.value);
 		setTimeout(()=>resolve(text),delay*1000);
 	});
